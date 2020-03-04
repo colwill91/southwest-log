@@ -1,38 +1,105 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Raleway', sans-serif;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  animation: App-logo-spin infinite 20s linear;
+  height: 80px;
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  background-color: #222;
+  height: 150px;
+  padding: 20px;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.App-intro {
+  font-size: large;
 }
 
 @keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.ReactModal__Overlay {
+  background-color: rgba(14, 14, 14, 0.75) !important;
+  z-index: 99999999 !important;
+}
+.ReactModal__Content {
+  top: 50% !important;
+  height: 80%;
+  width: 95%;
+  max-width: 1000px;
+  overflow: hidden;
+  left: 50% !important;
+  right: auto !important;
+  bottom: auto !important;
+  margin-right: -50% !important;
+  transform: translate(-50%, -50%) !important;
+  padding: 60px 40px !important;
+}
+
+.btn {
+  cursor: pointer;
+  padding: 8px;
+  background-color: transparent;
+  width: 80%;
+  max-width: 200px;
+}
+
+.close-modal {
+  position: absolute;
+  right: 20px;
+  top: 10px;
+  font-size: 1.8em;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 30px;
+}
+@media (min-width: 768px) {
+  h1 {
+    font-size: 36px;
   }
-  to {
-    transform: rotate(360deg);
+}
+h2 {
+  font-size: 24px;
+}
+@media (min-width: 768px) {
+  h2 {
+    font-size: 30px;
+  }
+}
+p {
+  line-height: 22px;
+}
+
+
+.text {
+  color: #4a4a4a;
+}
+
+* {
+  box-sizing : border-box;
+}
+
+
+.my-container {
+  padding: 0 15px;
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .my-container {
+    padding: 0 20px;
   }
 }

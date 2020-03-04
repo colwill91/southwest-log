@@ -1,0 +1,24 @@
+.divider {
+  background-color: #272521;
+  width: 26px;
+  display: block;
+  margin: 0 auto;
+  margin-top: 10px;
+  height: 1px;
+}
+.product{
+  margin-bottom: 40px;
+}
+.product .product-text {
+  color: rgba(0, 0, 0, 0.6);
+  font-size: .75em;
+  line-height: 19px;
+  display: block;
+  margin: 15px auto;
+  width: 80%;
+}
+.product button {
+  display: block;
+  margin: 15px auto;
+  width: 60%;
+}
