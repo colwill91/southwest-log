@@ -12,7 +12,7 @@ class Header extends Component {
 
   componentDidMount() {
     document.addEventListener('scroll', () => {
-      const isTop = isMobile ? window.scrollY < 50 : window.scrollY < 300;
+      const isTop = isMobile ? window.scrollY < 50 : window.scrollY < 100;
       if (isTop !== this.state.isTop) {
           this.setState({ isTop })
       }
@@ -46,12 +46,12 @@ class Header extends Component {
       background: #fff;
     }
     .logo {
-      font-size: 19px;
+      font-size: 17px;
       svg {
         margin-right: 10px;
       }
       @media (min-width: 768px) {
-        font-size: 30px;
+        font-size: 26px;
       }
     }
     .contact {
@@ -62,9 +62,9 @@ class Header extends Component {
       }
       .tel {
         letter-spacing: 2px;
-        font-size: .9em;
+        font-size: .8em;
         @media (min-width: 768px) {
-          font-size: 1.3em;
+          font-size: 1.2em;
         }
       }
       svg {
@@ -76,10 +76,10 @@ class Header extends Component {
       <StyledHeader isTop={this.state.isTop}>
         <div className="my-container">
           <div className="row between-xs">
-            <p className="logo"><FontAwesomeIcon icon={faBurn} size="1x" />Southwest Logs</p>
+            <p className="logo"><FontAwesomeIcon icon={faBurn} size="1x" />JP Countryside Services</p>
               <div className="contact">
                 <FontAwesomeIcon icon={faPhone} size="sm" />
-                <p className="tel"><a href="tel:07841911345">07841911345</a></p>
+                <p className="tel"><a href="tel:07825031794">07825031794</a></p>
               </div>
           </div>
         </div>

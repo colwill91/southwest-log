@@ -15,7 +15,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Hero image={img}/>
-        <HeaderText content="Free delivery on all services" />
+        <HeaderText content="Our Firewood" />
         <ProductsContainer />
         <Map />
         <Footer />

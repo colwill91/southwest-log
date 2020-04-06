@@ -43,7 +43,7 @@ class Footer extends Component {
          margin: 0 auto;
       }
       @media (min-width: 768px) {
-       font-size: 1.2em;
+       font-size: 1em;
       }
     }
   `;
@@ -53,19 +53,17 @@ class Footer extends Component {
         <div className="row">
           <div className="item phone col-xs-12 col-sm-4">
             <FontAwesomeIcon icon={faPhone} size="2x" />
-            <a href="tel:07841911345">07841911345</a>
+            <a href="tel:07825031794">07825031794</a>
           </div>
           <div className="item times col-xs-12 col-sm-4">
             <FontAwesomeIcon icon={faClock} size="2x" />
             <ul className="opening-times">
-              <li>Mon-Fri: 7am - 8pm</li>
-              <li>Sat: 7am - 10pm</li>
-              <li>Sun: Logged off</li>
+              <li>Mon-Sun: 8am - 7pm</li>
             </ul>
           </div>
            <div className="item email col-xs-12 col-sm-4">
            <FontAwesomeIcon icon={faEnvelope} size="2x" />
-           <p>southwestlogs@gmail.com</p>
+           <p>jpcountrysideservices@hotmail.co.uk</p>
           </div>
         </div>
       </div>

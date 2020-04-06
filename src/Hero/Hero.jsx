@@ -101,12 +101,12 @@ class Hero extends Component {
          <Overlay />
           <div className="my-container">
               <div className="content-wrapper">
-                <p className="content">Save money with our locally sourced high-quality kiln dried logs</p>
+                <p className="content">Save money with our locally sourced high-quality seasoned dried logs</p>
                 <ul className="checklist">
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Quality Firewood</li>
-                  <li><FontAwesomeIcon icon={faCheck} size="sm" />Defra Assured</li>
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Locally Sourced</li>
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />More Heat, Less Consumption</li>
+                  <li><FontAwesomeIcon icon={faCheck} size="sm" />Low Emissions</li>
                 </ul>
               </div>
           </div>

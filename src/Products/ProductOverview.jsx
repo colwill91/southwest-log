@@ -90,7 +90,7 @@ const ProductOverview = ({ item }) => {
         </div>
         <div className="overview-contact">
           <FontAwesomeIcon icon={faPhone} size="2x" />
-          <p>Please call <a href="tel:07841911345">07841911345</a> to order</p>
+          <p>Please call <a href="tel:07825031794">07825031794</a> to order</p>
         </div>
       </div>
     </StyledProductOverview>
