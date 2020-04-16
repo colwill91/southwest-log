@@ -4,6 +4,13 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 
 class Hero extends Component {
+  constructor(props) {
+    super(props);
+    this.scrollToForm = this.scrollToForm.bind(this);
+  }
+  scrollToForm() {
+    document.getElementById('order-form').scrollIntoView({behavior: 'smooth', block: 'start'});
+  }
   render() {
     const { image } = this.props
     const StyledHeroWrapper = styled.section`
@@ -48,8 +55,8 @@ class Hero extends Component {
       }
       .content-wrapper {
         position: absolute;
-        top: 120px;
-        font-size: 2em;
+        top: 80px;
+        font-size: 1.7em;
         left: 0;
         right: 0;
         margin-left: auto;
@@ -58,7 +65,11 @@ class Hero extends Component {
           line-height: 37px;
         }
         @media (min-width: 768px) {
-          top: 180px;
+          top: 150px;
+          font-size: 1.9em;
+        }
+        @media (min-width: 986px) {
+          font-size: 2.1em;
         }
         .checklist {
           list-style: none;
@@ -66,7 +77,7 @@ class Hero extends Component {
           font-size: 1.2rem;
           display: flex;
           flex-wrap: wrap;
-          margin-top: 70px;
+          margin-top: 30px;
           justify-content: center;
           @media (min-width: 768px) {
             margin-top: 50px;
@@ -92,6 +103,14 @@ class Hero extends Component {
             max-width: 550px;
           }
         }
+        .btn {
+          color: white !important;
+          border: 2px solid #65a25b;
+          border-radius: 50px;
+          background-color: #65a25b;
+          font-size: .9rem;
+          padding: 15px;
+        }
       }
     `;
 
@@ -108,6 +127,7 @@ class Hero extends Component {
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />More Heat, Less Consumption</li>
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Low Emissions</li>
                 </ul>
+                <button type="button" className="btn" onClick={this.scrollToForm}>Order Now</button>
               </div>
           </div>
         </StyledHeroInner>

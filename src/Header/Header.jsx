@@ -29,12 +29,21 @@ class Header extends Component {
     top: 0;
     z-index: 99999;
     transition: background-color 1s linear;
+    ${props => props.mode === 'product' && `
+      color: #332c29 !important;
+      background-color: white !important;
+      box-shadow: 0 4px 6px -6px #222 !important;
+    `}
     a {
       color: #332c29;
       text-decoration: none;
       ${props => props.isTop && `
         color: #fff;
-  `   }
+    `}
+    ${props => props.mode === 'product' && `
+      color: #332c29 !important;
+      background-color: white !important;
+    `}
     }
     ${props => props.isTop && `
       background-color: transparent;
@@ -46,7 +55,7 @@ class Header extends Component {
       background: #fff;
     }
     .logo {
-      font-size: 17px;
+      font-size: 16px;
       svg {
         margin-right: 10px;
       }
@@ -55,10 +64,13 @@ class Header extends Component {
       }
     }
     .contact {
-      display: flex;
+      display: none;
       align-items: center;
       @media (min-width: 768px) {
         margin-right: 40px;
+      }
+      @media (min-width: 375px) {
+        display: flex;
       }
       .tel {
         letter-spacing: 2px;
@@ -73,14 +85,16 @@ class Header extends Component {
     }
   `;
     return (
-      <StyledHeader isTop={this.state.isTop}>
+      <StyledHeader isTop={this.state.isTop} mode={this.props.mode}>
         <div className="my-container">
           <div className="row between-xs">
-            <p className="logo"><FontAwesomeIcon icon={faBurn} size="1x" />JP Countryside Services</p>
-              <div className="contact">
-                <FontAwesomeIcon icon={faPhone} size="sm" />
-                <p className="tel"><a href="tel:07825031794">07825031794</a></p>
-              </div>
+            <a href="/">
+              <p className="logo"><FontAwesomeIcon icon={faBurn} size="1x" />JP Countryside Services</p>
+            </a>
+            <div className="contact">
+              <FontAwesomeIcon icon={faPhone} size="sm" />
+              <p className="tel"><a href="tel:07825031794">07825031794</a></p>
+            </div>
           </div>
         </div>
       </StyledHeader>

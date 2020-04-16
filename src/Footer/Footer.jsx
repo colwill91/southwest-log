@@ -35,21 +35,21 @@ class Footer extends Component {
     }
     p, a {
       color: #fff;
-      font-size: 1.1em;
+      font-size: 1em;
       text-decoration: none;
       word-break: break-all;
       margin: 1em auto;
       @media (min-width: 768px) {
          margin: 0 auto;
       }
-      @media (min-width: 768px) {
-       font-size: 1em;
-      }
+      @media (min-width: 986px) {
+        font-size: 1em;
+       }
     }
   `;
     return (
       <StyledFooter>
-      <div className="my-container">
+      <div id="contact-me" className="my-container">
         <div className="row">
           <div className="item phone col-xs-12 col-sm-4">
             <FontAwesomeIcon icon={faPhone} size="2x" />

@@ -13,6 +13,7 @@ class ProductsContainer extends Component {
         margin: 80px auto;
       }
     `
+    
 
     return (
     <StyledProductsContainer>

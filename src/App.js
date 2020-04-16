@@ -1,25 +1,25 @@
 import React, { Component } from 'react';
-import Header from './Header/Header'
-import HeaderText from './HeaderText/HeaderText'
-import Hero from './Hero/Hero'
-import Map from './Map/Map'
-import Footer from './Footer/Footer'
-import './App.css';
-import './grid.css';
-import ProductsContainer from './Products/ProductsContainer';
-import img from './images/southwestlogs-bg.jpeg';
+import Main from './Main/Main'
+import Sub from './Main/Sub'
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+} from "react-router-dom";
 
 class App extends Component {
+
   render() {
     return (
+      <Router>
       <div className="App">
-        <Header />
-        <Hero image={img}/>
-        <HeaderText content="Our Firewood" />
-        <ProductsContainer />
-        <Map />
-        <Footer />
+        <Switch>
+          <Route exact path="/" component={Main} />
+          <Route exact path="/product/:id" render={(props) => <Sub {...props} /> } />
+        </Switch>
       </div>
+      </Router>
     );
   }
 }

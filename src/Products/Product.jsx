@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import './Product.css';
-import Modal from 'react-modal';
-import ProductOverview from './ProductOverview';
+import { Link } from "react-router-dom";
 
 class Product extends Component {
   constructor(props){
@@ -23,7 +22,7 @@ class Product extends Component {
 
   render() {
 
-    const { name, text, cost } = this.props.item;
+    const { name, text, cost, id } = this.props.item;
 
     return (
       <div className="product col-xs-12 col-sm-6 col-md-3">
@@ -31,19 +30,13 @@ class Product extends Component {
         <span className="divider"></span>
         <span className="product-text">{text}</span>
         <span className="product-price">£ {cost}</span>
-        <button className="btn" onClick={this.openModal}>See Product</button>
-        <Modal
-          isOpen={this.state.modalIsOpen}
-          contentLabel="Product Modal"
-          onRequestClose={this.closeModal}
-          ariaHideApp={false}
-        >
-          <button className="close-modal" onClick={this.closeModal}>x</button>
-          <ProductOverview item={this.props.item} />
-        </Modal>
+        <Link to={{ pathname: '/product/'+id}} className="button-link">
+          <button type="button" className="btn">See Product</button>
+        </Link>      
       </div>
     );
   }
 }
 
 export default Product;
+
