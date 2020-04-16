@@ -3,22 +3,6 @@ import './Product.css';
 import { Link } from "react-router-dom";
 
 class Product extends Component {
-  constructor(props){
-    super(props)
-    this.state = {
-      modalIsOpen: false
-    }
-    this.openModal = this.openModal.bind(this)
-    this.closeModal = this.closeModal.bind(this)
-  }
-
-  closeModal() {
-      this.setState({modalIsOpen: false});
-  }
-
-  openModal() {
-    this.setState({modalIsOpen: true});
-  }
 
   render() {
 
