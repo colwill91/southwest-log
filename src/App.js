@@ -3,23 +3,23 @@ import Main from './Main/Main'
 import Sub from './Main/Sub'
 
 import {
-  BrowserRouter as Router,
   Switch,
   Route,
+  HashRouter
 } from "react-router-dom";
 
 class App extends Component {
 
   render() {
     return (
-      <Router>
+      <HashRouter basename="/">
       <div className="App">
         <Switch>
           <Route exact path="/" component={Main} />
           <Route exact path="/product/:id" render={(props) => <Sub {...props} /> } />
         </Switch>
       </div>
-      </Router>
+      </HashRouter>
     );
   }
 }
