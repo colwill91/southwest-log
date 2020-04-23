@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faAngleLeft } from '@fortawesome/free-solid-svg-icons'
 import productsList from '../products.js'
+import { Link } from "react-router-dom";
 
 const ProductOverview = ({ productId }) => {
   useEffect(() => {
@@ -126,9 +127,9 @@ const ProductOverview = ({ productId }) => {
         <div className="row center-xs">
           <div className="product col-xs-12 col-md-9">
             <div className="right">
-              <a className="header-return" href="/">
-                <FontAwesomeIcon icon={faAngleLeft} size="sm" />Go back
-              </a>
+            <Link to={{ pathname: '/'}} className="header-return">
+              <FontAwesomeIcon icon={faAngleLeft} size="sm" />Go back
+            </Link>
               <p className="overview-title">{name}</p>
               <div className="overview-description">{textExtended}</div>
               <p className="overview-price">£ <strong>{cost}</strong> each complete with <strong>FREE</strong> delivery </p>

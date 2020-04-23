@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faBurn, faPhone } from '@fortawesome/free-solid-svg-icons'
 import {isMobile} from 'react-device-detect';
+import { Link } from "react-router-dom";
 
 class Header extends Component {
 
@@ -88,9 +89,9 @@ class Header extends Component {
       <StyledHeader isTop={this.state.isTop} mode={this.props.mode}>
         <div className="my-container">
           <div className="row between-xs">
-            <a href="/">
+            <Link to={{ pathname: '/'}}>
               <p className="logo"><FontAwesomeIcon icon={faBurn} size="1x" />JP Countryside Services</p>
-            </a>
+            </Link>
             <div className="contact">
               <FontAwesomeIcon icon={faPhone} size="sm" />
               <p className="tel"><a href="tel:07825031794">07825031794</a></p>
