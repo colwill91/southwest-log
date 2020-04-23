@@ -52,6 +52,9 @@ const ProductOverview = ({ productId }) => {
         margin: 10px auto 0 auto;
         font-size: 18px;
       }
+      .email {
+        color: #b97777;
+      }
       ul {
         list-style: none;
         padding: 0;
@@ -136,7 +139,7 @@ const ProductOverview = ({ productId }) => {
               <ul>
                 <li>Please call <a href="tel:07825031794">07825031794</a></li>
                 <span>or</span>
-                <li>Email me @ jpcountrysideservices@hotmail.co.uk</li>
+                <li>Email me @ <span className="email">jpcountrysideservices@gmail.com</span></li>
                 <span>or alternatively</span>
                 <li>Add this product to an order via the <a href="/#order-form">homepage</a></li>
               </ul>

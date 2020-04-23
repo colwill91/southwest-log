@@ -63,7 +63,7 @@ class Footer extends Component {
           </div>
            <div className="item email col-xs-12 col-sm-4">
            <FontAwesomeIcon icon={faEnvelope} size="2x" />
-           <p>jpcountrysideservices@hotmail.co.uk</p>
+           <p>jpcountrysideservices@gmail.com</p>
           </div>
         </div>
       </div>

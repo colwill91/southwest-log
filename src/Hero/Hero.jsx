@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
+import {isMobile} from 'react-device-detect';
 
 class Hero extends Component {
   constructor(props) {
@@ -40,17 +41,19 @@ class Hero extends Component {
       background-size: cover;
       background-attachment: fixed;
       flex: 1 1 auto;
-      background-position: -300px -50px;
-      @media (min-width: 480px) {
-        background-position: -240px -100px;
-      }
-      @media (min-width: 768px) {
-        background-position: -75px -65px;
-      }
+      background-position: -150px 0;
+      ${props => props.isMobile && `
+        background-attachment: scroll !important;
+        background-position: -100px 0;
+        @media (min-width: 450px) {
+          background-position: 0;
+        }
+      `   }
       @media (min-width: 900px) {
-        background-position: 0 -65px;
+        background-position: 0 -100px;
       }
       @media (min-width: 1100px) {
+        background-attachment: fixed;
         background-position: 0 -260px;
       }
       .content-wrapper {
@@ -116,7 +119,7 @@ class Hero extends Component {
 
     return (
       <StyledHeroWrapper>
-        <StyledHeroInner>
+        <StyledHeroInner isMobile={isMobile}>
          <Overlay />
           <div className="my-container">
               <div className="content-wrapper">
