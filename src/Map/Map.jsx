@@ -4,6 +4,7 @@ import img from '../images/map-full.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faTruck, faMouse } from '@fortawesome/free-solid-svg-icons'
 import Form from '../Form/Form'
+import { HashLink as Link } from 'react-router-hash-link';
 
 class Map extends Component {
 
@@ -62,7 +63,8 @@ class Map extends Component {
             <div className="order col-xs-12 col-sm-7">
               <FontAwesomeIcon icon={faMouse} size="2x" />
               <h3>Place An Order</h3>
-              <p className="fig fig-2">Please fill out the below form with your details and firewood choices and I will get back to you. Please feel free to <a href="#contact-me">contact me</a> directly if you prefer.</p>
+              <p className="fig fig-2">Please fill out the below form with your details and firewood choices and I will get back to you. Please feel free to 
+              <Link to="/#contact-me"> contact me</Link> directly if you prefer.</p>
               <Form />
             </div>
           </div>
