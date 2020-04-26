@@ -3,6 +3,7 @@ import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCheck } from '@fortawesome/free-solid-svg-icons'
 import {isMobile} from 'react-device-detect';
+import video from '../images/fire.mp4';
 
 class Hero extends Component {
   constructor(props) {
@@ -23,6 +24,19 @@ class Hero extends Component {
       position: relative;
       @media (min-width: 768px) {
         height: 480px;
+      }
+      .intro-video {
+        height: 100%;
+        width: 100%;
+        object-fit: fill;
+        ${props => props.isMobile && `
+        background-attachment: scroll !important;
+        background-position: -100px 0;
+        @media (min-width: 450px) {
+          background-position: 0;
+          display: none;
+        }
+        `}
       }
     `;
     const Overlay = styled.section`
@@ -113,14 +127,20 @@ class Hero extends Component {
           background-color: #65a25b;
           font-size: .9rem;
           padding: 15px;
+          z-index: 9999;
         }
       }
     `;
 
     return (
       <StyledHeroWrapper>
+        {!isMobile &&
+          <video className="intro-video" autoPlay muted loop>
+            <source src={video} type="video/mp4"/>
+          </video>
+        }
         <StyledHeroInner isMobile={isMobile}>
-         <Overlay />
+         <Overlay />      
           <div className="my-container">
               <div className="content-wrapper">
                 <p className="content">Save money with our locally sourced high-quality seasoned dried logs</p>
