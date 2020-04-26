@@ -7,12 +7,15 @@ class Footer extends Component {
 
   render() {
   const StyledFooter = styled.footer`
-    padding: 30px 20px 40px 20px;
     background: #332c29;
     color: #b4aaa2;
     letter-spacing: 3px;
-    @media (min-width: 768px) {
-     padding: 60px 20px 40px 20px;
+    #contact-me {
+      padding: 30px 20px 60px 20px;
+      position: relative;
+      @media (min-width: 768px) {
+        padding: 40px 20px 40px 20px;
+       }
     }
     .item {
       margin-bottom: 40px;
@@ -33,9 +36,16 @@ class Footer extends Component {
         }
       }
     }
+    h3 {
+      margin-top: 0;
+      margin-bottom: 50px;
+      @media (min-width: 768px) {
+        margin-bottom: 80px;
+      }
+    }
     p, a {
       color: #fff;
-      font-size: 1em;
+      font-size: .9em;
       text-decoration: none;
       word-break: break-all;
       margin: 1em auto;
@@ -46,10 +56,23 @@ class Footer extends Component {
         font-size: 1em;
        }
     }
+    .copy {
+      font-size: .5em;
+      position: absolute;
+      bottom: 0;
+      text-align: center;
+      left: 0;
+      width: 100%;
+      @media (min-width: 768px) {
+        bottom: 10px;
+        text-align: right;
+       }
+    }
   `;
     return (
       <StyledFooter>
       <div id="contact-me" className="my-container">
+        <h3>Please contact us via email or phone for any enquiries</h3>
         <div className="row">
           <div className="item phone col-xs-12 col-sm-4">
             <FontAwesomeIcon icon={faPhone} size="2x" />
@@ -66,6 +89,7 @@ class Footer extends Component {
            <p>jpcountrysideservices@gmail.com</p>
           </div>
         </div>
+        <p className="copy">Developed and designed by &copy;colwillcreations</p>
       </div>
       </StyledFooter>
     );

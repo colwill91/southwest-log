@@ -143,7 +143,7 @@ class Hero extends Component {
          <Overlay />      
           <div className="my-container">
               <div className="content-wrapper">
-                <p className="content">Save money with our locally sourced high-quality seasoned dried logs</p>
+                <p className="content">Save money with our locally sourced high-quality seasoned dried firewood logs</p>
                 <ul className="checklist">
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Quality Firewood</li>
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Locally Sourced</li>
