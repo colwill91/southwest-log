@@ -305,3 +305,7 @@ form.log-form {
   color: rgb(119, 119, 119);
   font-size: .85rem;
 }
+
+.form-error {
+  font-size: .9em;
+}

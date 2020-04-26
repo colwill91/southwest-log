@@ -55,7 +55,7 @@ class Form extends Component {
       kindlingChecked 
     } = this.state;
 
-    const optionSelected =  dumpyChecked || barrowChecked ||  pickupChecked || kindlingChecked
+    const optionSelected =  true
 
     return (
       <form
@@ -76,7 +76,7 @@ class Form extends Component {
                 return this.setState({ nameFocussed: true })
               }
               return this.setState({ nameFocussed: false })}
-            } />
+            } required/>
         </div>
 
         <div className={`form-section text-field ${this.state.locationFocussed ? 'focussed' : ''}`}>
@@ -93,6 +93,69 @@ class Form extends Component {
             }
           />
         </div>
+
+        {optionSelected && 
+          <div>
+            <p className="form-section-title">How would you like us to contact you?</p>
+            <div className="form-section checkbox-group">
+              <div className="radio-wrapper">
+                <label className="colwill-checkbox" for="email">
+                  <input type="radio" id="email" name="contact" value="email" 
+                  onChange={e => this.setState({ chosenOption: e.target.value })}/>
+                  <div className="checkbox">
+                    <span>Email</span>
+                  </div>
+                </label>
+              </div>
+              <div className="radio-wrapper">
+                <label className="colwill-checkbox" for="phone">
+                  <input type="radio" id="phone" name="contact" value="phone" 
+                  onChange={e => this.setState({ chosenOption: e.target.value })}/>
+                  <div className="checkbox">
+                    <span>Phone</span>
+                  </div>
+                </label>
+              </div>
+            </div>
+          </div>
+        }
+
+
+        {this.state.chosenOption === 'email' && optionSelected && 
+          <div className={`form-section text-field ${this.state.emailFocussed ? 'focussed' : ''}`}>
+            <label>
+              <FontAwesomeIcon icon={faEnvelope} /> Your Email:
+            </label>
+            <input 
+              className="field" 
+              type="email" 
+              name="email" 
+              onChange={e => {
+                if(e.target.value) {
+                  return this.setState({ emailFocussed: true })
+                }
+                return this.setState({ emailFocussed: false })}
+              }
+              required/>
+          </div>
+        } 
+        {this.state.chosenOption === 'phone' && optionSelected && 
+          <div className={`form-section text-field ${this.state.phoneFocussed ? 'focussed' : ''}`}>
+            <label for="phone"><FontAwesomeIcon icon={faPhone} />Your Contact Number:</label>
+            <input 
+              className="field" 
+              type="tel" 
+              id="phone" 
+              name="phone" 
+              onChange={e => {
+                if(e.target.value) {
+                  return this.setState({ phoneFocussed: true })
+                }
+                return this.setState({ phoneFocussed: false })}
+              }
+              required></input>
+          </div>
+        } 
 
         <p className="form-section-title">Which firewood products are you interested in?</p>
         <div className="form-section checkbox-group">
@@ -201,74 +264,12 @@ class Form extends Component {
           </div>
         }
         
-        {optionSelected && 
-          <div>
-            <p className="form-section-title">How would you like us to contact you?</p>
-            <div className="form-section checkbox-group">
-              <div className="radio-wrapper">
-                <label className="colwill-checkbox" for="email">
-                  <input type="radio" id="email" name="contact" value="email" 
-                  onChange={e => this.setState({ chosenOption: e.target.value })}/>
-                  <div className="checkbox">
-                    <span>Email</span>
-                  </div>
-                </label>
-              </div>
-              <div className="radio-wrapper">
-                <label className="colwill-checkbox" for="phone">
-                  <input type="radio" id="phone" name="contact" value="phone" 
-                  onChange={e => this.setState({ chosenOption: e.target.value })}/>
-                  <div className="checkbox">
-                    <span>Phone</span>
-                  </div>
-                </label>
-              </div>
-            </div>
-          </div>
-        }
-
-
-        {this.state.chosenOption === 'email' && optionSelected && 
-          <div className={`form-section text-field ${this.state.emailFocussed ? 'focussed' : ''}`}>
-            <label>
-              <FontAwesomeIcon icon={faEnvelope} /> Your Email:
-            </label>
-            <input 
-              className="field" 
-              type="email" 
-              name="email" 
-              onChange={e => {
-                if(e.target.value) {
-                  return this.setState({ emailFocussed: true })
-                }
-                return this.setState({ emailFocussed: false })}
-              }
-              required/>
-          </div>
-        } 
-        {this.state.chosenOption === 'phone' && optionSelected && 
-          <div className={`form-section text-field ${this.state.phoneFocussed ? 'focussed' : ''}`}>
-            <label for="phone"><FontAwesomeIcon icon={faPhone} />Your Contact Number:</label>
-            <input 
-              className="field" 
-              type="tel" 
-              id="phone" 
-              name="phone" 
-              onChange={e => {
-                if(e.target.value) {
-                  return this.setState({ phoneFocussed: true })
-                }
-                return this.setState({ phoneFocussed: false })}
-              }
-              required></input>
-          </div>
-        } 
-
         {this.state.status === "SUCCESS" ? 
           <p>Thank you for your interest, We will be in touch shortly</p> : 
           <button className="btn">Submit</button>
         }
-        {this.state.status === "ERROR" && <p>Ooops! There was an error.</p>}
+        {this.state.status === "ERROR" && <p className="form-error">Sorry, there was an issue submitting this order. 
+          Please could you call us on <a href="tel:07825031794">07825031794</a> or email jpcountrysideservices@gmail.com</p>}
       </form>
     );
   }
