@@ -1,10 +1,10 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "e95fa2c5e427c889a20477b555feca8d",
+    "revision": "572514f8d9b178aa72c419b74825c875",
     "url": "/southwest-log/index.html"
   },
   {
-    "revision": "40df89dfc0f00e969526",
+    "revision": "72c31bca06bb9cf239be",
     "url": "/southwest-log/static/css/main.832f4b61.chunk.css"
   },
   {
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/southwest-log/static/js/2.f2253483.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "40df89dfc0f00e969526",
-    "url": "/southwest-log/static/js/main.0fe2284e.chunk.js"
+    "revision": "72c31bca06bb9cf239be",
+    "url": "/southwest-log/static/js/main.a8cbeb3a.chunk.js"
   },
   {
     "revision": "9deb3e9f1f6d43599004",

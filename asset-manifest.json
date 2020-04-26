@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/southwest-log/static/css/main.832f4b61.chunk.css",
-    "main.js": "/southwest-log/static/js/main.0fe2284e.chunk.js",
-    "main.js.map": "/southwest-log/static/js/main.0fe2284e.chunk.js.map",
+    "main.js": "/southwest-log/static/js/main.a8cbeb3a.chunk.js",
+    "main.js.map": "/southwest-log/static/js/main.a8cbeb3a.chunk.js.map",
     "runtime-main.js": "/southwest-log/static/js/runtime-main.64554860.js",
     "runtime-main.js.map": "/southwest-log/static/js/runtime-main.64554860.js.map",
     "static/js/2.f2253483.chunk.js": "/southwest-log/static/js/2.f2253483.chunk.js",
     "static/js/2.f2253483.chunk.js.map": "/southwest-log/static/js/2.f2253483.chunk.js.map",
     "index.html": "/southwest-log/index.html",
-    "precache-manifest.6046e714955a4684370545eefc0f88bd.js": "/southwest-log/precache-manifest.6046e714955a4684370545eefc0f88bd.js",
+    "precache-manifest.dd438c668c63feb942eb516d2624507d.js": "/southwest-log/precache-manifest.dd438c668c63feb942eb516d2624507d.js",
     "service-worker.js": "/southwest-log/service-worker.js",
     "static/css/main.832f4b61.chunk.css.map": "/southwest-log/static/css/main.832f4b61.chunk.css.map",
     "static/js/2.f2253483.chunk.js.LICENSE.txt": "/southwest-log/static/js/2.f2253483.chunk.js.LICENSE.txt",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.64554860.js",
     "static/js/2.f2253483.chunk.js",
     "static/css/main.832f4b61.chunk.css",
-    "static/js/main.0fe2284e.chunk.js"
+    "static/js/main.a8cbeb3a.chunk.js"
   ]
 }
