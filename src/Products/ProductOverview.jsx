@@ -20,6 +20,7 @@ const ProductOverview = ({ productId }) => {
       margin: 20px 0 ;
       color: rgba(0, 0, 0, 0.6);
       font-size: .8em;
+      line-height: 23px;
       @media (min-width: 768px) {
         font-size: 1em;
       }
@@ -117,6 +118,10 @@ const ProductOverview = ({ productId }) => {
         margin-top: 60px;
       }
     }
+    .disclaimer {
+      font-size: 13px;
+      color: rgba(0,0,0,0.6);
+    }
   `
   const result = productsList.find(product => product.id === productId)
   const { name, cost, textExtended } = result
@@ -131,18 +136,21 @@ const ProductOverview = ({ productId }) => {
               <FontAwesomeIcon icon={faAngleLeft} size="sm" />Go back
             </Link>
               <p className="overview-title">{name}</p>
-              <div className="overview-description">{textExtended}</div>
+              <div className="overview-description">
+                {textExtended}
+              </div>
               <p className="overview-price">£ <strong>{cost}</strong> each complete with <strong>FREE</strong> delivery </p>
+              <p className="disclaimer">*All logs are cut between 8-10 inches. If you require a different sized log please get in touch.*</p>
             </div>
             <h3 className="order-title">Wish to place an order?</h3>
-            
+
             <div className="overview-contact">
               <ul>
                 <li>Please call <a href="tel:07825031794">07825031794</a></li>
                 <span>or</span>
                 <li>Email me @ <span className="email">jpcountrysideservices@gmail.com</span></li>
                 <span>or alternatively</span>
-                <li>Add this product to an order via the <a href="/#order-form">homepage</a></li>
+                <li>Add this product to an order via the <Link to={{ pathname: '/'}}>homepage</Link></li>
               </ul>
             </div>
           </div>

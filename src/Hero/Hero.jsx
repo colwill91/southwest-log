@@ -11,7 +11,7 @@ class Hero extends Component {
     this.scrollToForm = this.scrollToForm.bind(this);
   }
   scrollToForm() {
-    document.getElementById('order-form').scrollIntoView({behavior: 'smooth', block: 'start'});
+    document.getElementById('order-form').scrollIntoView({behavior: 'smooth', block: 'end'});
   }
   render() {
     const { image } = this.props
@@ -140,7 +140,7 @@ class Hero extends Component {
           </video>
         }
         <StyledHeroInner isMobile={isMobile}>
-         <Overlay />      
+         <Overlay />
           <div className="my-container">
               <div className="content-wrapper">
                 <p className="content">Save money with our locally sourced high-quality seasoned dried firewood logs</p>
