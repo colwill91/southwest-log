@@ -3,7 +3,7 @@ export default
  {
    "id": 'dumpy-bag',
    "name": "Dumpy Bag",
-   "text": "Our Dummpy Bags hold between 150-170 logs. All Dumpy Bags come with free delivery.",
+   "text": "Our Dumpy Bags hold between 150-170 logs. All Dumpy Bags come with free delivery.",
    "textExtended": "Great for a bulk buy of logs our Dummpy Bags are 86x86x86cm and hold 150-170 logs. All Dumpy Bags come with free delivery.",
    "cost": 75,
    "image": ''
@@ -28,8 +28,8 @@ export default
  {
    "id": 'kindling-nets',
    "name": "Kindling Nets",
-   "text": "A bag of small kindling sticks containing up to 40 sticks. Nets have free delivery when ordered with any size load.",
-   "textExtended": "Our bag of small kindling sticks are 38x50cm in size and contain up to 40 sticks. Great for getting a fire started in a smaller wood burning stove or outdoor fire pit. Our Kindling Nets come with free delivery when ordered with any other size load of logs.",
+   "text": "A net of small kindling sticks containing up to 40 sticks. Nets have free delivery when ordered with any size load.",
+   "textExtended": "Our nets of small kindling sticks are 38x50cm in size and contain up to 40 sticks. Great for getting a fire started in a smaller wood burning stove or outdoor fire pit. Our Kindling Nets come with free delivery when ordered with any other size load of logs.",
    "cost": 5,
    "image": ''
  }
