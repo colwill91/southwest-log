@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import styled from 'styled-components'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPhone, faEnvelope, faClock} from '@fortawesome/free-solid-svg-icons'
-import { Link } from "react-router-dom";
 
 class Footer extends Component {
 
@@ -93,7 +92,6 @@ class Footer extends Component {
            <p>jpcountrysideservices@gmail.com</p>
           </div>
         </div>
-        <p className="copy">Developed and designed by &copy;<a href="www.paulcolwill.co.uk" target="_blank">Paul Colwill</a></p>
       </div>
       </StyledFooter>
     );
@@ -101,3 +99,6 @@ class Footer extends Component {
 }
 
 export default Footer;
+
+
+//<p className="copy">Developed and designed by &copy;<a href="www.paulcolwill.co.uk" target="_blank">Paul Colwill</a></p>

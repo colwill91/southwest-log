@@ -20,16 +20,16 @@ export default
  {
    "id": 'pick-up-load',
    "name": "Pick Up Load",
-   "text": "Our Pick Up Load contains up to 200 logs. Our Pick Up Loads come with free delivery.",
-   "textExtended": "Our Pick Up Load contains up to 200 logs and come with free delivery.",
+   "text": "Our Pick Up Load contains up to 350 logs equivalent to 1 cubic meter. Our Pick Up Loads come with free delivery.",
+   "textExtended": "Our Pick Up Load contains up to 350 logs equivalent to 1 cubic meter and come with free delivery.",
    "cost": 90,
    "image": ''
  },
  {
    "id": 'kindling-nets',
    "name": "Kindling Nets",
-   "text": "A net of small kindling sticks containing up to 40 sticks. Nets have free delivery when ordered with any size load.",
-   "textExtended": "Our nets of small kindling sticks are 38x50cm in size and contain up to 40 sticks. Great for getting a fire started in a smaller wood burning stove or outdoor fire pit. Our Kindling Nets come with free delivery when ordered with any other size load of logs.",
+   "text": "A large kindling net of premium dry wood. Nets have free delivery when ordered with any size load.",
+   "textExtended": "Our large kindlings nets of premium dry wood are 38x50cm in size. Great for getting a fire started in a smaller wood burning stove or outdoor fire pit. Our Kindling Nets come with free delivery when ordered with any other size load of logs.",
    "cost": 5,
    "image": ''
  }
