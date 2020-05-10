@@ -80,6 +80,9 @@ class Hero extends Component {
         margin-right: auto;
         p.content {
           line-height: 37px;
+          @media (min-width: 768px) {
+            line-height: 42px;
+          }
         }
         @media (min-width: 768px) {
           top: 150px;
@@ -143,7 +146,7 @@ class Hero extends Component {
          <Overlay />
           <div className="my-container">
               <div className="content-wrapper">
-                <p className="content">Save money with our locally sourced high-quality seasoned dried firewood logs</p>
+                <p className="content">Save money with our locally sourced high-quality seasoned firewood logs</p>
                 <ul className="checklist">
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Quality Firewood</li>
                   <li><FontAwesomeIcon icon={faCheck} size="sm" />Locally Sourced</li>
