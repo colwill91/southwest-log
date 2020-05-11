@@ -27,6 +27,11 @@
   background-color: transparent;
   width: 80%;
   max-width: 200px;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+.btn:hover {
+  transform: scale(1.1);
 }
 
 .button-link {
@@ -96,7 +101,7 @@ p {
   font-size: .8rem;
   pointer-events: none;
   z-index: 0;
-} 
+}
 
 .text-field svg {
   margin-right: 8px;

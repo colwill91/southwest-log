@@ -48,12 +48,6 @@ class Form extends Component {
   }
 
   render() {
-    const {  
-      dumpyChecked,
-      barrowChecked,
-      pickupChecked,
-      kindlingChecked 
-    } = this.state;
 
     const optionSelected =  true
 
@@ -66,11 +60,12 @@ class Form extends Component {
         className="log-form"
       >
         <div className={`form-section text-field ${this.state.nameFocussed ? 'focussed' : ''}`}>
-          <label><FontAwesomeIcon icon={faUser} />Your Name:</label>
-          <input 
-            className="field" 
-            type="text" 
+          <label htmlFor="name"><FontAwesomeIcon icon={faUser} />Your Name:</label>
+          <input
+            className="field"
+            type="text"
             name="text"
+            id="name"
             onChange={e => {
               if(e.target.value) {
                 return this.setState({ nameFocussed: true })
@@ -80,11 +75,12 @@ class Form extends Component {
         </div>
 
         <div className={`form-section text-field ${this.state.locationFocussed ? 'focussed' : ''}`}>
-          <label><FontAwesomeIcon icon={faLocationArrow} />Your Location:</label>
-          <input 
+          <label htmlFor="location"><FontAwesomeIcon icon={faLocationArrow} />Your Location:</label>
+          <input
             className="field"
-            type="text" 
-            name="text" 
+            type="text"
+            name="text"
+            id="location"
             onChange={e => {
               if(e.target.value) {
                 return this.setState({ locationFocussed: true })
@@ -94,13 +90,13 @@ class Form extends Component {
           />
         </div>
 
-        {optionSelected && 
+        {optionSelected &&
           <div>
             <p className="form-section-title">How would you like us to contact you?</p>
             <div className="form-section checkbox-group">
               <div className="radio-wrapper">
-                <label className="colwill-checkbox" for="email">
-                  <input type="radio" id="email" name="contact" value="email" 
+                <label className="colwill-checkbox" htmlFor="email">
+                  <input type="radio" id="email" name="contact" value="email"
                   onChange={e => this.setState({ chosenOption: e.target.value })}/>
                   <div className="checkbox">
                     <span>Email</span>
@@ -108,8 +104,8 @@ class Form extends Component {
                 </label>
               </div>
               <div className="radio-wrapper">
-                <label className="colwill-checkbox" for="phone">
-                  <input type="radio" id="phone" name="contact" value="phone" 
+                <label className="colwill-checkbox" htmlFor="phone">
+                  <input type="radio" id="phone" name="contact" value="phone"
                   onChange={e => this.setState({ chosenOption: e.target.value })}/>
                   <div className="checkbox">
                     <span>Phone</span>
@@ -121,15 +117,15 @@ class Form extends Component {
         }
 
 
-        {this.state.chosenOption === 'email' && optionSelected && 
+        {this.state.chosenOption === 'email' && optionSelected &&
           <div className={`form-section text-field ${this.state.emailFocussed ? 'focussed' : ''}`}>
             <label>
               <FontAwesomeIcon icon={faEnvelope} /> Your Email:
             </label>
-            <input 
-              className="field" 
-              type="email" 
-              name="email" 
+            <input
+              className="field"
+              type="email"
+              name="email"
               onChange={e => {
                 if(e.target.value) {
                   return this.setState({ emailFocussed: true })
@@ -138,15 +134,15 @@ class Form extends Component {
               }
               required/>
           </div>
-        } 
-        {this.state.chosenOption === 'phone' && optionSelected && 
+        }
+        {this.state.chosenOption === 'phone' && optionSelected &&
           <div className={`form-section text-field ${this.state.phoneFocussed ? 'focussed' : ''}`}>
-            <label for="phone"><FontAwesomeIcon icon={faPhone} />Your Contact Number:</label>
-            <input 
-              className="field" 
-              type="tel" 
-              id="phone" 
-              name="phone" 
+            <label htmlFor="phone"><FontAwesomeIcon icon={faPhone} />Your Contact Number:</label>
+            <input
+              className="field"
+              type="tel"
+              id="phone"
+              name="phone"
               onChange={e => {
                 if(e.target.value) {
                   return this.setState({ phoneFocussed: true })
@@ -155,13 +151,13 @@ class Form extends Component {
               }
               required></input>
           </div>
-        } 
+        }
 
         <p className="form-section-title">Which firewood products are you interested in?</p>
         <div className="form-section checkbox-group">
           <div className="checkbox-wrapper">
-            <label className="colwill-checkbox" for="item1">   
-              <input type="checkbox" id="item1" value="Dumpy Bag" 
+            <label className="colwill-checkbox" htmlFor="item1">
+              <input type="checkbox" id="item1" value="Dumpy Bag"
               onClick={() => this.setState(prevState => ({
                 dumpyChecked: !prevState.dumpyChecked
               }))} />
@@ -171,8 +167,8 @@ class Form extends Component {
             </label>
           </div>
           <div className="checkbox-wrapper">
-            <label className="colwill-checkbox" for="item2">
-              <input type="checkbox" id="item2" value="Barrow Bags" 
+            <label className="colwill-checkbox" htmlFor="item2">
+              <input type="checkbox" id="item2" value="Barrow Bags"
               onClick={() => this.setState(prevState => ({
                 barrowChecked: !prevState.barrowChecked
               }))}/>
@@ -182,8 +178,8 @@ class Form extends Component {
             </label>
           </div>
           <div className="checkbox-wrapper">
-            <label className="colwill-checkbox" for="item3">
-              <input type="checkbox" id="item3" value="Pick Up Loads" 
+            <label className="colwill-checkbox" htmlFor="item3">
+              <input type="checkbox" id="item3" value="Pick Up Loads"
               onClick={() => this.setState(prevState => ({
                 pickupChecked: !prevState.pickupChecked
               }))}/>
@@ -193,7 +189,7 @@ class Form extends Component {
             </label>
           </div>
           <div className="checkbox-wrapper">
-            <label className="colwill-checkbox" for="item4">
+            <label className="colwill-checkbox" htmlFor="item4">
               <input type="checkbox" id="item4" value="Kindling Nets" onClick={() => this.setState(prevState => ({
                 kindlingChecked: !prevState.kindlingChecked
               }))}/>
@@ -206,7 +202,7 @@ class Form extends Component {
 
         {this.state.dumpyChecked &&
           <div className={`form-section text-field ${this.state.dumpyFocussed ? 'focussed' : ''}`}>
-            <label for="dumpy-quantity">How many Dumpy Bags do you require?</label>
+            <label htmlFor="dumpy-quantity">How many Dumpy Bags do you require?</label>
             <input className="field" type="number" id="dumpy-quantity" name="dumpy-quantity" min="1" max="50"
             onChange={e => {
               this.setState({ dumpyQuantity: parseInt(e.target.value) })
@@ -221,7 +217,7 @@ class Form extends Component {
 
         {this.state.barrowChecked &&
           <div className={`form-section text-field ${this.state.barrowFocussed ? 'focussed' : ''}`}>
-            <label for="barrow-quantity">How many Barrow Bags do you require?</label>
+            <label htmlFor="barrow-quantity">How many Barrow Bags do you require?</label>
             <input className="field" type="number" id="barrow-quantity" name="barrow-quantity" min="1" max="50"
             onChange={e => {
               this.setState({ barrowQuantity: parseInt(e.target.value) })
@@ -236,7 +232,7 @@ class Form extends Component {
 
         {this.state.pickupChecked &&
           <div className={`form-section text-field ${this.state.pickupFocussed ? 'focussed' : ''}`}>
-            <label for="pickup-quantity">How many Pick Loads do you require?</label>
+            <label htmlFor="pickup-quantity">How many Pick Loads do you require?</label>
             <input className="field" type="number" id="pickup-quantity" name="pickup-quantity" min="1" max="50"
             onChange={e => {
               this.setState({ pickupQuantity: parseInt(e.target.value) })
@@ -251,7 +247,7 @@ class Form extends Component {
 
         {this.state.kindlingChecked &&
           <div className={`form-section text-field ${this.state.kindlingFocussed ? 'focussed' : ''}`}>
-            <label for="kindling-quantity">How many Kindling Nets do you require?</label>
+            <label htmlFor="kindling-quantity">How many Kindling Nets do you require?</label>
             <input className="field"  type="number" id="kindling-quantity" name="kindling-quantity" min="1" max="50"
             onChange={e => {
               this.setState({ kindlingQuantity: parseInt(e.target.value) })
@@ -263,12 +259,12 @@ class Form extends Component {
             }/>
           </div>
         }
-        
-        {this.state.status === "SUCCESS" ? 
-          <p>Thank you for your interest, We will be in touch shortly</p> : 
+
+        {this.state.status === "SUCCESS" ?
+          <p>Thank you for your interest, We will be in touch shortly</p> :
           <button className="btn">Submit</button>
         }
-        {this.state.status === "ERROR" && <p className="form-error">Sorry, there was an issue submitting this order. 
+        {this.state.status === "ERROR" && <p className="form-error">Sorry, there was an issue submitting this order.
           Please could you call us on <a href="tel:07825031794">07825031794</a> or email jpcountrysideservices@gmail.com</p>}
       </form>
     );
